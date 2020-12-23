@@ -1,6 +1,6 @@
 'use strict';
 
-// 定数
+// マスタ
 const data = [
   {
     url: "https://ogu-rep.github.io/css-popup/",
