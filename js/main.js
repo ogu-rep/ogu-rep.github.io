@@ -51,7 +51,6 @@
   }
 
   const body = document.querySelector('body');
-
   addContents().forEach(content => {
     body.appendChild(content);
   });
