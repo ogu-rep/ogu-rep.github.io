@@ -74,7 +74,7 @@ const data = [
   },
   {
     url: "https://github.com/ogu-rep/my-sql",
-    name: "MySQL",
+    name: "stored procedure",
     useLang: ["MySQL"],
   },
 ];

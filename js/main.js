@@ -7,25 +7,26 @@
 
   function addContents() {
     data.forEach((datum, i) => {
-      contents.push(createDiv(datum, i));
+      contents.push(createContent(datum, i));
     });
 
     return contents;
   }
 
-  function createDiv(datum, i) {
+  function createContent(datum, i) {
     const div = document.createElement("div");
-    div.classList.add("content");
+    div.classList.add("box");
     div.setAttribute("id", `content${i + 1}`);
     div.appendChild(createParagraph(datum));
     div.appendChild(createList(datum));
+    div.appendChild(createLink(datum));
 
     return div;
   }
 
   function createLink(datum) {
     const a = document.createElement("a");
-    a.textContent = datum["name"];
+    // a.textContent = datum["name"];
     a.href = datum["url"];
     a.setAttribute('target', "_blank");
 
@@ -34,7 +35,8 @@
 
   function createParagraph(datum) {
     const p = document.createElement("p");
-    p.appendChild(createLink(datum));
+    p.textContent = datum["name"];
+    // p.appendChild(createLink(datum));
 
     return p;
   }
@@ -50,9 +52,23 @@
     return ul;
   }
 
-  const body = document.querySelector('body');
+  function createHeader(text) {
+    const h1 = document.createElement("h1");
+    h1.textContent = text;
 
-  addContents().forEach(content => {
-    body.appendChild(content);
-  });
+    return h1;
+  }
+
+  function createmain() {
+    const main = document.createElement("main");
+    addContents().forEach(content => {
+      main.appendChild(content);
+    });
+
+    return main;
+  }
+
+  const body = document.querySelector("body");
+  body.appendChild(createHeader("sogu-rep"));
+  body.appendChild(createmain());
 }
