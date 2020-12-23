@@ -17,27 +17,29 @@
     const div = document.createElement("div");
     div.classList.add("box");
     div.setAttribute("id", `content${i + 1}`);
-    div.appendChild(createLink(datum));
+    div.appendChild(createParagraph(datum));
     div.appendChild(createList(datum));
+    div.appendChild(createLink(datum));
 
     return div;
   }
 
   function createLink(datum) {
     const a = document.createElement("a");
-    a.textContent = datum["name"];
+    // a.textContent = datum["name"];
     a.href = datum["url"];
     a.setAttribute('target', "_blank");
 
     return a;
   }
 
-  // function createParagraph(datum) {
-  //   const p = document.createElement("p");
-  //   p.appendChild(createLink(datum));
+  function createParagraph(datum) {
+    const p = document.createElement("p");
+    p.textContent = datum["name"];
+    // p.appendChild(createLink(datum));
 
-  //   return p;
-  // }
+    return p;
+  }
 
   function createList(datum) {
     const ul = document.createElement("ul");
