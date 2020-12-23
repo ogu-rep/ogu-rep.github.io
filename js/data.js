@@ -18,6 +18,16 @@ const data = [
     useLang: ["html", "CSS", "Javascript"],
   },
   {
+    url: "https://ogu-rep.github.io/tab-menu/",
+    name: "Tab Menu",
+    useLang: ["html", "CSS", "Javascript"],
+  },
+  {
+    url: "https://ogu-rep.github.io/hamburger-menu/",
+    name: "Hamburger Menu",
+    useLang: ["html", "CSS", "Javascript"],
+  },
+  {
     url: "https://ogu-rep.github.io/stop-watch/",
     name: "Stop Watch",
     useLang: ["html", "CSS", "Javascript"],
