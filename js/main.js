@@ -26,7 +26,6 @@
 
   function createLink(datum) {
     const a = document.createElement("a");
-    // a.textContent = datum["name"];
     a.href = datum["url"];
     a.setAttribute('target', "_blank");
 
@@ -36,7 +35,6 @@
   function createParagraph(datum) {
     const p = document.createElement("p");
     p.textContent = datum["name"];
-    // p.appendChild(createLink(datum));
 
     return p;
   }
@@ -59,7 +57,7 @@
     return h1;
   }
 
-  function createmain() {
+  function createMain() {
     const main = document.createElement("main");
     addContents().forEach(content => {
       main.appendChild(content);
@@ -70,5 +68,5 @@
 
   const body = document.querySelector("body");
   body.appendChild(createHeader("sogu-rep"));
-  body.appendChild(createmain());
+  body.appendChild(createMain());
 }
