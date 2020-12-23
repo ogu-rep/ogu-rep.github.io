@@ -26,6 +26,7 @@
 
   function createLink(datum) {
     const a = document.createElement("a");
+    // a.textContent = datum["name"];
     a.href = datum["url"];
     a.setAttribute('target', "_blank");
 
@@ -35,6 +36,7 @@
   function createParagraph(datum) {
     const p = document.createElement("p");
     p.textContent = datum["name"];
+    // p.appendChild(createLink(datum));
 
     return p;
   }
