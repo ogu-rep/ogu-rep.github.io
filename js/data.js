@@ -77,4 +77,9 @@ const data = [
     name: "stored procedure",
     useLang: ["MySQL"],
   },
+  {
+    url: "https://ogu-rep.github.io/ajax-example/",
+    name: "ajax example",
+    useLang: ["html", "CSS", "Javascript"],
+  },
 ];
